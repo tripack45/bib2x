@@ -16,8 +16,16 @@ In the source directory, execute
 make
 ```
 
-You should find the built binary at `src/bib2x`. 
+You can execute the built executable through the wrapper script `src/bib2x`. 
 
+The actual built binaries `bib2x` and `lt-bib2x` are under `src/.libs`. 
+It seems by default both binaries dynamically links, in addition to the C++ libraries, 
+`libodb.so` which is part of the built artifact. 
+
+Execute `make install` to collect and place the built artifacts under system directory.
+
+Alternatively, pass `--prefix=$(pwd)/bin` to the `configure` script to place install the artifact 
+under `bin`. In this case you can find the built binary at `bin/bib2x` and the dependency `libodb.so` under `bin/lib`.
 
 
 Contents of the original packaged `README`
