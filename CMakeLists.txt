@@ -44,4 +44,5 @@ add_library(odb STATIC ${ODB_SOURCES})
 target_include_directories(odb PUBLIC "include/")
 
 add_executable(bib2x ${BIB2X_SOURCES})
+target_include_directories(bib2x PUBLIC "include/")
 target_link_libraries(bib2x odb)
