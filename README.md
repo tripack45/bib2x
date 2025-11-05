@@ -23,6 +23,12 @@ make install
 
 You find built executable at `out/bin/bib2x', along with a few example templates in `out/templates`.
 
+On newer MacOS you may need to regenerate the configuration script by running 
+
+```
+autoreconf -fi
+```
+
 
 Contents of the original packaged `README`
 -------------------------------------------
