@@ -48,8 +48,11 @@ public:
 
 	static CLatexConv& Instance()
 		{
-		static CLatexConv oLatexConv;
-		return oLatexConv;
+		static CLatexConv* oLatexConv = NULL;
+		if (oLatexConv == NULL) {
+			oLatexConv = new CLatexConv;
+		}
+		return *oLatexConv;
 		}
 
 

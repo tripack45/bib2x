@@ -22,7 +22,11 @@ extern int nLine;
 
 extern char *bibtext;
 
-CBib& g_oBib = CBib::Instance();
+
+// This makes sure CBib construction is delayed until RTTI is fully setup
+//
+// CBib& g_oBib = CBib::Instance();
+#define g_oBib CBib::Instance()
 
 
 int bibwrap()
