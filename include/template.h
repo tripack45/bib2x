@@ -71,8 +71,10 @@ public:
 	
 	static CTemplate& Instance()
 		{
-		static CTemplate oTemplate;
-		return oTemplate;
+		static CTemplate* oTemplate = NULL; 
+		if (oTemplate == NULL)
+			oTemplate = new CTemplate;
+		return *oTemplate;
 		}
 
 	bool IsValid ( ) { return m_bIsValid; }

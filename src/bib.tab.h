@@ -1,38 +1,115 @@
-typedef union
+/* A Bison parser, made by GNU Bison 3.8.2.  */
+
+/* Bison interface for Yacc-like parsers in C
+
+   Copyright (C) 1984, 1989-1990, 2000-2015, 2018-2021 Free Software Foundation,
+   Inc.
+
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.  */
+
+/* As a special exception, you may create a larger work that contains
+   part or all of the Bison parser skeleton and distribute that work
+   under terms of your choice, so long as that work isn't itself a
+   parser generator using the skeleton or a modified version thereof
+   as a parser skeleton.  Alternatively, if you modify or redistribute
+   the parser skeleton itself, you may (at your option) remove this
+   special exception, which will cause the skeleton and the resulting
+   Bison output files to be licensed under the GNU General Public
+   License without this special exception.
+
+   This special exception was added by the Free Software Foundation in
+   version 2.2 of Bison.  */
+
+/* DO NOT RELY ON FEATURES THAT ARE NOT DOCUMENTED in the manual,
+   especially those whose name start with YY_ or yy_.  They are
+   private implementation details that can be changed or removed.  */
+
+#ifndef YY_BIB_BIB_TAB_H_INCLUDED
+# define YY_BIB_BIB_TAB_H_INCLUDED
+/* Debug traces.  */
+#ifndef YYDEBUG
+# define YYDEBUG 0
+#endif
+#if YYDEBUG
+extern int bibdebug;
+#endif
+
+/* Token kinds.  */
+#ifndef YYTOKENTYPE
+# define YYTOKENTYPE
+  enum yytokentype
+  {
+    YYEMPTY = -2,
+    YYEOF = 0,                     /* "end of file"  */
+    YYerror = 256,                 /* error  */
+    YYUNDEF = 257,                 /* "invalid token"  */
+    ATSTRING = 258,                /* ATSTRING  */
+    ATCOMMENT = 259,               /* ATCOMMENT  */
+    ATINCLUDE = 260,               /* ATINCLUDE  */
+    ATPREAMBLE = 261,              /* ATPREAMBLE  */
+    ENTRYTYPE = 262,               /* ENTRYTYPE  */
+    LATEXCOMMAND = 263,            /* LATEXCOMMAND  */
+    KEY = 264,                     /* KEY  */
+    EQUALS = 265,                  /* EQUALS  */
+    COMMA = 266,                   /* COMMA  */
+    COLON = 267,                   /* COLON  */
+    DOT = 268,                     /* DOT  */
+    OBRACE = 269,                  /* OBRACE  */
+    EBRACE = 270,                  /* EBRACE  */
+    OPAR = 271,                    /* OPAR  */
+    EPAR = 272,                    /* EPAR  */
+    NUMBER = 273,                  /* NUMBER  */
+    WORD = 274,                    /* WORD  */
+    WHITESPACE = 275,              /* WHITESPACE  */
+    NEWLINE = 276,                 /* NEWLINE  */
+    ANF = 277,                     /* ANF  */
+    COMMENT = 278,                 /* COMMENT  */
+    RAUTE = 279,                   /* RAUTE  */
+    TILDE = 280,                   /* TILDE  */
+    PIPE = 281,                    /* PIPE  */
+    PATH = 282,                    /* PATH  */
+    MATHMODE = 283,                /* MATHMODE  */
+    ACCENT = 284,                  /* ACCENT  */
+    EXCLAM = 285,                  /* EXCLAM  */
+    QUEST = 286,                   /* QUEST  */
+    TIME = 287                     /* TIME  */
+  };
+  typedef enum yytokentype yytoken_kind_t;
+#endif
+
+/* Value type.  */
+#if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
+union YYSTYPE
 {
+#line 58 "bib.y"
+
     int number;
     char* string;
-} YYSTYPE;
-#define	ATSTRING	257
-#define	ATCOMMENT	258
-#define	ATINCLUDE	259
-#define	ATPREAMBLE	260
-#define	ENTRYTYPE	261
-#define	LATEXCOMMAND	262
-#define	KEY	263
-#define	EQUALS	264
-#define	COMMA	265
-#define	COLON	266
-#define	DOT	267
-#define	OBRACE	268
-#define	EBRACE	269
-#define	OPAR	270
-#define	EPAR	271
-#define	NUMBER	272
-#define	WORD	273
-#define	WHITESPACE	274
-#define	NEWLINE	275
-#define	ANF	276
-#define	COMMENT	277
-#define	RAUTE	278
-#define	TILDE	279
-#define	PIPE	280
-#define	PATH	281
-#define	MATHMODE	282
-#define	ACCENT	283
-#define	EXCLAM	284
-#define	QUEST	285
-#define	TIME	286
+
+#line 101 "bib.tab.h"
+
+};
+typedef union YYSTYPE YYSTYPE;
+# define YYSTYPE_IS_TRIVIAL 1
+# define YYSTYPE_IS_DECLARED 1
+#endif
 
 
 extern YYSTYPE biblval;
+
+
+int bibparse (void);
+
+
+#endif /* !YY_BIB_BIB_TAB_H_INCLUDED  */

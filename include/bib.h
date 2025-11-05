@@ -107,8 +107,11 @@ public:
 
 	static CBib& Instance()
 		{
-		static CBib oBib;
-		return oBib;
+		static CBib* oBib = NULL;
+		if (oBib == NULL) {
+			oBib = new CBib;
+		}
+		return *oBib;
 		}
 
 	odb::CODB& GetODB ( ) { return odb; }
