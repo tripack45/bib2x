@@ -7,25 +7,21 @@ to compile on modern platforms.
 
 ## Building
 
-Building should only require a compatible shell and a C++ compiler. 
+Building requires:
 
-In the source directory, execute
+- A C++ toolchain,
+- `bison` and `flex` parser-lexer generator, 
+- and `CMake`.
+
+In the root source directory, execute
 
 ```bash
-./configure
-make
+mkdir build && cd ./build              # Create a build directory
+cmake -DCMAKE_INSTALL_PREFIX=../out .. # ../out is the install directory
+make install
 ```
 
-You can execute the built executable through the wrapper script `src/bib2x`. 
-
-The actual built binaries `bib2x` and `lt-bib2x` are under `src/.libs`. 
-It seems by default both binaries dynamically links, in addition to the C++ libraries, 
-`libodb.so` which is part of the built artifact. 
-
-Execute `make install` to collect and place the built artifacts under system directory.
-
-Alternatively, pass `--prefix=$(pwd)/bin` to the `configure` script to place install the artifact 
-under `bin`. In this case you can find the built binary at `bin/bib2x` and the dependency `libodb.so` under `bin/lib`.
+You find built executable at `out/bin/bib2x', along with a few example templates in `out/templates`.
 
 
 Contents of the original packaged `README`
