@@ -53,3 +53,5 @@ add_executable(bib2x
 
 target_include_directories(bib2x PUBLIC "${INCLUDE_DIR}")
 target_link_libraries(bib2x odb)
+
+install(TARGETS bib2x DESTINATION bin)

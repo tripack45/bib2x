@@ -14,5 +14,6 @@ add_compile_options(
 )
 
 add_subdirectory(src)
+add_subdirectory(include)
 add_subdirectory(templates)
 

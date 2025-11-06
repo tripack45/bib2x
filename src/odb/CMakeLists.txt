@@ -25,3 +25,5 @@ set(ODB_SOURCES
 
 add_library(odb STATIC ${ODB_SOURCES})
 target_include_directories(odb PUBLIC "${INCLUDE_DIR}")
+
+install(TARGETS odb DESTINATION libs)
