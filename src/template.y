@@ -153,10 +153,10 @@ constraints: target TOKEN_LBRACE values TOKEN_RPAR { }
 	| target TOKEN_LBRACE values constraints { }
 	;
 
-target: TOKEN_WORDX TOKEN_OPERATOR { g_oTemplate.Constraint ( $1, $2, true ) };
+target: TOKEN_WORDX TOKEN_OPERATOR { g_oTemplate.Constraint ( $1, $2, true ); };
 	| TOKEN_WORD TOKEN_OPERATOR { g_oTemplate.Constraint ( $1, $2, false ); };
 
-values: value TOKEN_RBRACE { g_oTemplate.FinishValues() }
+values: value TOKEN_RBRACE { g_oTemplate.FinishValues(); }
 	| value TOKEN_COMMA values {  }
 	;
 

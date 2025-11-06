@@ -1,0 +1,32 @@
+set(DIST_HEADERS 
+    bib.h 
+    entries.h 
+    latexconv.h 
+    output.h 
+    outputhtml.h 
+    outputodb.h 
+    template.h 
+    utfconv.h 
+    atom.h 
+    atomdata.h 
+    atomdata3dpoint.h 
+    atomdatabinary.h 
+    atomdatafile.h 
+    atomdatafilelink.h 
+    atomdatainteger.h 
+    atomdatareal.h 
+    atomdatastring.h 
+    class.h 
+    generic.h 
+    keyname.h 
+    object.h 
+    odb.h 
+    reason.h 
+    root.h 
+    rope.h 
+    rtti.h 
+    stream.h 
+    transaction.h
+)
+
+install(FILES ${DIST_HEADERS} DESTINATION "include/")
