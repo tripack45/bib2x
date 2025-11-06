@@ -4,7 +4,7 @@ bison_target(BibParser
     bib.y                  # Parser source
     bib.tab.cxx            # Generated file
     DEFINES_FILE bib.tab.h # Definitions header
-    COMPILE_FLAGS "-p bib -dv -Wno-other"
+    COMPILE_FLAGS "-p bib -dv"
     )
 
 flex_target(BibLexer 
@@ -21,7 +21,7 @@ bison_target(TemplateParser
     template.y                  # Parser source
     template.tab.cxx            # Generated file
     DEFINES_FILE template.tab.h # Definitions header
-    COMPILE_FLAGS "-p template -dv -Wno-other"
+    COMPILE_FLAGS "-p template -dv"
     )
 
 flex_target(TemplateLexer 
